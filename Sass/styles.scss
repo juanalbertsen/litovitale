@@ -4,6 +4,11 @@ $destacado: #E16428;
 $logoSize: 1.8em;
 $modo: oscuro;
 
+@mixin imgSize ($heigth, $width) {
+    height: $heigth;
+    width: $width;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -154,8 +159,7 @@ h4{
         }
 
         &__imagen{
-            width: 250px;
-            height: auto;
+            @include imgSize(auto,250);
             margin: auto;
         }
 
@@ -218,13 +222,11 @@ h4{
     }
 
     &__imgDiscos{
-        width: 100px;
-        height: 100px;
+       @include imgSize(100px,100px)
     }
 
     &__imgDiscos--grande{
-        width: 150px;
-        height: 150px;
+        @include imgSize (120px,120px)
     }
 }
 
