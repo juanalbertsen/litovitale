@@ -4,10 +4,6 @@ $destacado: #E16428;
 $logoSize: 1.8em;
 $modo: oscuro;
 
-
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -58,7 +54,7 @@ h4{
         }
     }
 
-    .banner, .banner2, .banner3{
+    .banner{
         min-width: 100%;
         height: 600px;
         background-image: url(../img/lito-banner.jpeg);
@@ -67,10 +63,12 @@ h4{
         background-size: cover;
     }
     .banner2{
+        @extend .banner1;
         background-image: url(../img/lito-vitale-4.jpeg);
        
     }
     .banner3{
+        @extend .banner1;
         background-image: url(../img/vitaleBanner2.jpeg);
        
     }
@@ -247,70 +245,7 @@ h4{
 
 /* Tienda */
 
-.tienda__productos{
-    margin: auto;
-    width: fit-content;
-    padding: 25px;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 20px;
-}
-
-
-@media only screen and (max-width:900px){
-    .tienda__productos{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-@media only screen and (max-width:650px){
-    .tienda__productos{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media only screen and (max-width:375px){
-    .tienda__productos{
-        grid-template-columns: 1fr;
-    }
-}
-
-.producto{
-    padding: 30px;
-    width: 200px;
-    text-align: center;
-    margin: 5px;
-    line-height: 30px;
-    @if $modo == oscuro{
-        border: 1px solid white;
-        } @if $modo == claro{
-            border: 1px solid black;
-        }
-
-    &__icono{
-        font-size: 13px;
-    }
-
-    &__imagen{
-        height: 120px;
-        width: 120px;
-        }
-
-    &__imagen:hover{
-        animation: agrandarImg .5s;
-    }    
-
-}
-@keyframes agrandarImg {
-    
-    0%{
-        height: 120px;
-        width: 120px;
-    }
-
-    100%{
-        height: 140px;
-        width: 140px;
-    }
-}
+@import url(/Sass/tienda.scss);
 
 /* CONTACTO */
 
