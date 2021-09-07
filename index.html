@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lito Vitale | Músico</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+<!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+<!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
+
+<!-- Animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- íconos -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-3  bg-body rounded">
+            <div class="container-fluid p-2 m-2 ">
+              <a class="navbar-brand navbar__logoh1" href="#"> Lito <span class="destacado">Vitale</span> </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end fs-5" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Pages/musico.html">Músico</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Pages/estudio.html">Estudio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Pages/tienda.html" >Tienda</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Pages/contacto.html" >Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+
+        <div id="carouselExampleIndicators" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active banner "></div>
+              <div class="carousel-item banner2"></div>
+              <div class="carousel-item banner3"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+         <section id="proximosConciertos" class="proximosConciertos">
+            <h2 class="tituloHome">Próximos <span class="destacado">Conciertos</span></h2>
+
+            <a href="#proximosConciertos"><i class="fas fa-chevron-down flechita"></i></a>
+
+            <div class="conciertos">
+
+                <div data-aos="zoom-out" class="concierto">
+                        <img src="./img/Agitandoflyer.jpeg" alt="Flyer concierto" class="concierto__imagen">
+                    <div class="concierto__descripccion">
+                        <h3 class="">Agitando Pañuelos</h3>
+                            <p>27/09/2021</p>
+                            <p>19.30 hs</p>
+                        <p class="concierto__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque expedita reprehenderit dolorem, tempora ipsum iusto mollitia consectetur rerum, assumenda consequuntur nulla tempore qui veritatis nisi dolores perferendis libero. Hic, consectetur.</p>
+                        <input type="button" class="btn btn-dark w-75" id="btnComprar" value="Comprar Entradas">
+                    </div>
+                </div>
+
+                <div  data-aos="zoom-out" class="concierto">
+                    <img src="./img/ActuarFlyer.jpeg" alt="Flyer concierto" class="concierto__imagen">
+                    <div class="concierto__descripccion">
+                        <h3 class="">Actuar para Vivir</h3>
+                            <p>1/08/2021</p>
+                            <p>12.30 hs</p>
+                        <p class="concierto__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque expedita reprehenderit dolorem, tempora ipsum iusto mollitia consectetur rerum, assumenda consequuntur nulla tempore qui veritatis nisi dolores perferendis libero. Hic, consectetur.</p>
+                        <input type="button" class=" btn btn-dark w-75" id="btnComprar" value="Comprar Entradas">
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </section>
+
+    </main>
+
+    <footer class="footer">
+      
+      <div class="footer__redes">
+          <p>Redes Sociales</p>
+          
+          <ul class="footer__lista">
+              <li><a href="https://www.instagram.com/litovitaleoficial/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/Lito.Vitale.Oficial/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.youtube.com/litovitalecanaloficial" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+      </div>
+  </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/21d12332aa.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

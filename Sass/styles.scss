@@ -1,0 +1,409 @@
+/*Variables*/
+
+$destacado: #E16428;
+$logoSize: 1.8em;
+$modo: oscuro;
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    @if $modo == oscuro{
+    background-color: #000;
+    color: white;
+    } @else {
+        background-color: white;
+        color: #000;
+    }
+}
+
+textarea{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.destacado{
+    color:$destacado;
+    font-weight: bold;
+}
+
+img{
+    transition: all 0.2s linear;
+
+    &:hover{
+        transform:  scale(1.05);
+    }
+}
+
+h4{
+    font-size: 1em;
+    margin:5px;
+}
+
+    .navbar__logoh1{
+        font-family: 'Rock Salt', cursive;
+        font-size: $logoSize;
+        &:hover{
+            font-size:$logoSize*1.2;
+        }
+    }
+
+    .banner, .banner2, .banner3{
+        min-width: 100%;
+        height: 600px;
+        background-image: url(../img/lito-banner.jpeg);
+        background-position:top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner2{
+        background-image: url(../img/lito-vitale-4.jpeg);
+       
+    }
+    .banner3{
+        background-image: url(../img/vitaleBanner2.jpeg);
+       
+    }
+
+    h2{
+        text-align: center;
+        padding: 10px;
+        margin-top: 12px;
+        margin-bottom: 30px;
+        letter-spacing: 4px;
+        }
+    
+    .flechita{
+        color: white;
+        animation-duration: 1s;
+        animation-name: flechaBaja;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        position: relative;
+        }
+     
+    /* Flecha animada que indica scroll hacia abajo  */
+
+    @keyframes flechaBaja {
+        0%{
+            top:-20px;
+        }
+        100%{
+            top:0px;
+        }
+    }
+
+    .proximosConciertos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .conciertos{
+        margin: 40px auto;
+        padding: 10px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @if $modo == oscuro{
+            background: rgb(6, 6, 6);
+            color: white;
+            } @if $modo == claro{
+                backgound: white;
+                color: #000;
+            }
+        
+    }
+
+    .concierto{
+        margin: 20px 10px;
+        padding: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 800px;
+
+        @if $modo == oscuro{
+            border: 1px solid white;
+            } @if $modo == claro{
+                border: 1px solid black;
+            }
+
+
+        &__descripccion{
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 5px;
+        }
+
+        &__imagen{
+            width: 250px;
+            height: auto;
+            margin: auto;
+        }
+
+        &__texto{
+            padding: 10px 0;
+            font-size: 13px;
+            margin: 5px;
+           }
+
+            }
+/* Nueva orientación para pantallas grandes */
+
+@media screen and (min-width:750px){
+    .concierto{
+        flex-direction: row;
+    }
+}
+
+/* MUSICO */
+
+.articulo{
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+    margin: 40px auto 40px auto;
+    flex-wrap: wrap;
+    
+    &__imagen{
+    width:500px;
+    margin: 20px auto;
+    }
+
+    &__texto{
+        text-align: justify;
+    }
+}
+
+.playlist{
+    margin:auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:75%;
+    padding: 10px;
+    
+
+    &__spotify{
+        min-width: 100%;
+        margin: 10px;}
+    
+    &__discos{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 10px;
+        column-gap: 5px;
+        
+    }
+
+    &__imgDiscos{
+        width: 100px;
+        height: 100px;
+    }
+
+    &__imgDiscos--grande{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ESTUDIO */
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.card-body{
+    height: 10rem;
+    min-height: max-content;
+}
+.galeria__card--sinBorde{
+    border: none;
+}
+
+/* Tienda */
+
+.tienda__productos{
+    margin: auto;
+    width: fit-content;
+    padding: 25px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+
+
+@media only screen and (max-width:900px){
+    .tienda__productos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media only screen and (max-width:650px){
+    .tienda__productos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width:375px){
+    .tienda__productos{
+        grid-template-columns: 1fr;
+    }
+}
+
+.producto{
+    padding: 30px;
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    line-height: 30px;
+    @if $modo == oscuro{
+        border: 1px solid white;
+        } @if $modo == claro{
+            border: 1px solid black;
+        }
+
+    &__icono{
+        font-size: 13px;
+    }
+
+    &__imagen{
+        height: 120px;
+        width: 120px;
+        }
+
+    &__imagen:hover{
+        animation: agrandarImg .5s;
+    }    
+
+}
+@keyframes agrandarImg {
+    
+    0%{
+        height: 120px;
+        width: 120px;
+    }
+
+    100%{
+        height: 140px;
+        width: 140px;
+    }
+}
+
+/* CONTACTO */
+
+.contacto{
+    width: 75%;
+    margin: auto auto 30px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__img{
+        height:300px;
+        width: auto;
+    }
+
+    &__form{
+        flex-basis: 50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        textarea{
+            margin-bottom: 10px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+           }
+        }
+    
+    &__form input{
+        margin-bottom: 10px;
+        padding: 5px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        width: 49.5%;
+       }
+    &__boton{
+        width: 25%;
+        padding: 5px;
+        background-color: black;
+        border: solid 1px white;
+        margin-left: auto;
+        &:hover{
+            font-weight: 900;
+            border: solid 2px white;
+        }
+    }
+    p{
+        margin: 20px;
+    }
+}
+textarea:focus, input:focus{
+    border-bottom: 1px solid rgb(188, 231, 194);
+    outline: none;
+}
+
+/* Footer */
+
+.footer{
+   
+    background-image: linear-gradient(to right, #141313 0%, black 100%);
+    height: 150px;
+    width: 100%;
+    margin-top: 40px;
+
+    &__redes{
+        padding:15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__lista{
+        list-style-type: none;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        i{
+            color: grey;
+            font-size: 30px;
+            font-weight: 100;;
+            margin: 5px;
+            transition: all .5s;
+            &:hover{
+                transform: scale(1.5);
+                color:$destacado;
+
+            }
+        }
+    }
+
+    
+}

@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+.sinBorde{
+    border: none;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    font-family: 'Open Sans', sans-serif;
+}
+
+img{
+    transition: all 0.2s linear;
+}
+
+img:hover{
+    transform:  scale(1.05);
+}
+
+h4{
+    font-size: 1em;
+    margin:5px;
+}
+
+    .logoh1{
+        font-family: 'Rock Salt', cursive;
+        font-size: 1.8em;
+    }
+
+    .banner, .banner2, .banner3{
+        min-width: 100%;
+        height: 600px;
+        background-image: url(../img/lito-banner.jpeg);
+        background-position:top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner2{
+        background-image: url(../img/lito-vitale-4.jpeg);
+       
+    }
+    .banner3{
+        background-image: url(../img/vitaleBanner2.jpeg);
+       
+    }
+
+h2{
+    text-align: center;
+    padding: 10px;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    }
+
+.flechita{
+    animation-duration: 1s;
+    animation-name: flechaBaja;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: relative;
+    }
+
+
+    /* Flecha animada que indica scroll hacia abajo  */
+
+@keyframes flechaBaja {
+
+    0%{
+        top:-20px;
+    }
+
+    100%{
+        top:0px;
+    }
+    
+}
+
+
+.proximosConciertos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conciertos{
+    margin: 40px auto;
+    padding: 10px;
+    width: 75%;
+    background: rgb(6, 6, 6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.concierto{
+    margin: 20px 10px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    max-width: 700px;
+        }
+
+.concierto__descripccion{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.concierto__imagen{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    }
+
+.concierto__texto{
+    color: white;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+
+
+/*Footer*/
+
+i{
+    font-size: 30px;
+    font-weight: 100;;
+    margin: 5px;
+}
+
+/* Nueva orientación para pantallas grandes */
+
+@media screen and (min-width:750px){
+    .concierto{
+        flex-direction: row;
+    }
+}
+
+/* MUSICO */
+
+.articulo__imagen{
+width:600px;
+margin: auto;
+}
+
+.articulo{
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+    margin: 40px auto 40px auto;
+    flex-wrap: wrap;
+}
+
+.playlist{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width:75%;
+    margin: auto;
+    padding: 10px;
+}
+
+.playlist__spotify{
+    width: min-content;
+    margin: 10px;
+}
+
+.playlist__discos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 5px;
+    
+}
+
+.playlist__imgDiscos{
+    width: 100px;
+    height: 100px;
+}
+
+.playlist__imgDiscos--grande{
+    width: 150px;
+    height: 150px;
+}
+
+/* ESTUDIO */
+
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.card-body{
+    height: 10rem;
+    min-height: max-content;
+}
+
+.galeria__card--sinBorde{
+    border: none;
+}
+
+
+
+/* Tienda */
+
+.tienda__productos{
+    margin: auto;
+    width: fit-content;
+    padding: 25px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+
+
+@media only screen and (max-width:900px){
+    .tienda__productos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media only screen and (max-width:650px){
+    .tienda__productos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width:375px){
+    .tienda__productos{
+        grid-template-columns: 1fr;
+    }
+}
+
+.producto{
+    border: solid 1px white;
+    padding: 30px;
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    line-height: 30px;
+}
+
+.producto__icono{
+    font-size: 13px;
+}
+
+.producto__imagen{
+    height: 120px;
+    width: 120px;
+    }
+
+.producto__imagen:hover{
+    animation: agrandarImg .5s;
+}    
+
+@keyframes agrandarImg {
+    
+    0%{
+        height: 120px;
+        width: 120px;
+    }
+
+    100%{
+        height: 140px;
+        width: 140px;
+    }
+}
+
+
+/* CONTACTO */
+
+.contacto{
+    width: 75%;
+    margin: auto auto 30px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contacto p{
+    margin: 20px;
+}
+
+
+.contacto__img{
+    height:300px;
+    width: 400px;
+}
+
+
+.contacto__form{
+    flex-basis: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    }
+
+
+
+.h2Contacto{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.contacto__form input{
+    margin-bottom: 10px;
+    padding: 5px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 49.5%;
+   }
+
+
+   textarea:focus, input:focus{
+    border-bottom: 1px solid rgb(188, 231, 194);
+    outline: none;
+}
+
+
+
+
+.contacto__form textarea{
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+   }
+
+.contacto__boton{
+    width: 25%;
+    padding: 5px;
+    background-color: black;
+    border: solid 1px white;
+    margin-left: auto;
+}
+
+.contacto__boton:hover{
+    font-weight: 900;
+    border: solid 2px white;
+}
+
+
+/* Footer */
+
+.footer{
+   
+    background-image: linear-gradient(to right, #141313 0%, black 100%);
+    height: 150px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer__redes{
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__lista{
+    list-style-type: none;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.listaRedes i{
+    transition: transform 1s;
+    
+}
+
+.listaRedes i:hover{
+    transform: scale(1.5);
+}
