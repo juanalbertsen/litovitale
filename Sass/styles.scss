@@ -4,6 +4,13 @@ $destacado: #E16428;
 $logoSize: 1.8em;
 $modo: oscuro;
 
+/*mapa de colores de redes*/
+$redes: ( 
+    youtube: #fc0a0a,
+    facebook:  #224faf,
+    instagram: #d16f42
+); 
+
 @mixin imgSize ($heigth, $width) {
     height: $heigth;
     width: $width;
@@ -68,12 +75,12 @@ h4{
         background-size: cover;
     }
     .banner2{
-        @extend .banner1;
+        @extend .banner;
         background-image: url(../img/lito-vitale-4.jpeg);
        
     }
     .banner3{
-        @extend .banner1;
+        @extend .banner;
         background-image: url(../img/vitaleBanner2.jpeg);
        
     }
@@ -159,7 +166,7 @@ h4{
         }
 
         &__imagen{
-            @include imgSize(auto,250);
+            @include imgSize(auto,250px);
             margin: auto;
         }
 
@@ -247,7 +254,7 @@ h4{
 
 /* Tienda */
 
-@import url(/Sass/tienda.scss);
+@import "tienda";
 
 /* CONTACTO */
 
@@ -285,6 +292,7 @@ h4{
         width: 49.5%;
        }
     &__boton{
+        color: white;
         width: 25%;
         padding: 5px;
         background-color: black;
@@ -328,19 +336,25 @@ textarea:focus, input:focus{
         flex-direction: row;
         justify-content: space-evenly;
 
+
+
+
+
         i{
             color: grey;
             font-size: 30px;
             font-weight: 100;;
             margin: 5px;
             transition: all .5s;
-            &:hover{
-                transform: scale(1.5);
-                color:$destacado;
-
             }
         }
     }
-
     
+ /*Creamos el bucle para usar los valores del mapa*/
+ 
+ @each $red, $color in $redes {
+        .icon--#{$red}:hover {
+           color: $color;
+           transform:  scale(1.2);
+        }
 }

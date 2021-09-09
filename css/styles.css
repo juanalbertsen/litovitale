@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Variables*/
+/*mapa de colores de redes*/
 * {
   margin: 0;
   padding: 0;
@@ -185,8 +186,8 @@ h2 {
 }
 
 .concierto__imagen {
-  width: 250px;
   height: auto;
+  width: 250px;
   margin: auto;
 }
 
@@ -267,13 +268,13 @@ h2 {
 }
 
 .playlist__imgDiscos {
-  width: 100px;
   height: 100px;
+  width: 100px;
 }
 
 .playlist__imgDiscos--grande {
-  width: 150px;
-  height: 150px;
+  height: 120px;
+  width: 120px;
 }
 
 /* ESTUDIO */
@@ -339,6 +340,11 @@ h2 {
   border: 1px solid white;
 }
 
+.producto_titulo {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
 .producto__icono {
   font-size: 13px;
 }
@@ -359,8 +365,8 @@ h2 {
     width: 120px;
   }
   100% {
-    height: 140px;
-    width: 140px;
+    height: 125px;
+    width: 125px;
   }
 }
 
@@ -370,8 +376,8 @@ h2 {
     width: 120px;
   }
   100% {
-    height: 140px;
-    width: 140px;
+    height: 125px;
+    width: 125px;
   }
 }
 
@@ -423,6 +429,7 @@ h2 {
 }
 
 .contacto__boton {
+  color: white;
   width: 25%;
   padding: 5px;
   background-color: black;
@@ -494,9 +501,22 @@ textarea:focus, input:focus {
   transition: all .5s;
 }
 
-.footer__lista i:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  color: #E16428;
+/*Creamos el bucle para usar los valores del mapa*/
+.icon--youtube:hover {
+  color: #fc0a0a;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.icon--facebook:hover {
+  color: #224faf;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.icon--instagram:hover {
+  color: #d16f42;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=styles.css.map */
