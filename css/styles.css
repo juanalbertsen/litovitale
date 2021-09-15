@@ -198,36 +198,24 @@ h2 {
 }
 
 /* Nueva orientación para pantallas grandes */
-@media screen and (min-width: 750px) {
-  .concierto {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-/* MUSICO */
-.articulo {
+c .articulo {
+  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 75%;
-  margin: 40px auto 40px auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-.articulo__imagen {
+c .articulo__imagen {
   width: 500px;
-  margin: 20px auto;
+  margin: auto;
 }
 
-.articulo__texto {
+c .articulo__texto {
   text-align: justify;
 }
 
@@ -236,9 +224,11 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -246,14 +236,15 @@ h2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 75%;
+  padding: 10px;
 }
 
 .playlist__spotify {
   min-width: 100%;
+  margin: 10px;
 }
 
 .playlist__discos {
-  margin: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
