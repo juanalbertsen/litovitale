@@ -198,24 +198,36 @@ h2 {
 }
 
 /* Nueva orientación para pantallas grandes */
-c .articulo {
-  background-color: red;
+@media screen and (min-width: 750px) {
+  .concierto {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/* MUSICO */
+.articulo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   max-width: 75%;
+  margin: 40px auto 40px auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-c .articulo__imagen {
+.articulo__imagen {
   width: 500px;
-  margin: auto;
+  margin: 20px auto;
 }
 
-c .articulo__texto {
+.articulo__texto {
   text-align: justify;
 }
 
@@ -224,11 +236,9 @@ c .articulo__texto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -236,15 +246,14 @@ c .articulo__texto {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 75%;
-  padding: 10px;
 }
 
 .playlist__spotify {
   min-width: 100%;
-  margin: 10px;
 }
 
 .playlist__discos {
+  margin: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
