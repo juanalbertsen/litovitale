@@ -236,10 +236,9 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -247,19 +246,18 @@ h2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 75%;
-  padding: 10px;
 }
 
 .playlist__spotify {
   min-width: 100%;
-  margin: 10px;
 }
 
 .playlist__discos {
+  margin: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
   row-gap: 10px;
@@ -275,6 +273,16 @@ h2 {
 .playlist__imgDiscos--grande {
   height: 120px;
   width: 120px;
+}
+
+@media screen and (max-width: 600px) {
+  .playlist__discos {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ESTUDIO */
@@ -342,7 +350,6 @@ h2 {
 
 .producto_titulo {
   font-size: 1.1em;
-  font-weight: 600;
 }
 
 .producto__icono {

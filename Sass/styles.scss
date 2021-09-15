@@ -185,6 +185,7 @@ h4{
     }
 }
 
+
 /* MUSICO */
 
 .articulo{
@@ -207,33 +208,45 @@ h4{
 .playlist{
     margin:auto;
     display: flex;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
-    width:75%;
-    padding: 10px;
+    width: 75%;
+    
     
 
     &__spotify{
         min-width: 100%;
-        margin: 10px;}
+        }
     
     &__discos{
+        margin:0;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
         row-gap: 10px;
         column-gap: 5px;
         
     }
 
+    
+    
+    
+    
+    
+    
     &__imgDiscos{
-       @include imgSize(100px,100px)
+        @include imgSize(100px,100px)
     }
-
+    
     &__imgDiscos--grande{
         @include imgSize (120px,120px)
+    }
+}
+@media screen and (max-width:600px){
+    .playlist__discos{
+        align-self: center;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
